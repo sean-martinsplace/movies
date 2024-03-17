@@ -8,6 +8,6 @@ COPY . .
 
 RUN yarn build
 
-FROM nginx:alpine
+FROM nginx:1.25.4-alpine3.18
 COPY --from=dev /src/dist /usr/share/nginx/html
 EXPOSE 80
